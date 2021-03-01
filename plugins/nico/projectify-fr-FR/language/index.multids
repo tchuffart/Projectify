@@ -12,7 +12,7 @@ AddTodo/Hint: Ajouter une nouvelle tâche au projet
 AddTodoToProject/Placeholder: Décrivez cette tâche...
 AllClear: Tout est clair !
 Archive: Archive
-ArchiveProject/Caption: Archiver ce project
+ArchiveProject/Caption: Archiver ce projet
 ArchiveProject/Hint: Supprimer ce projet de la liste des projets actifs
 Cancel/Caption: Annuler
 CardOptions/Hint: Options de la carte
