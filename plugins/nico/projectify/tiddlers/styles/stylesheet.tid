@@ -290,3 +290,55 @@ type: text/vnd.tiddlywiki
   width: 50px;
   padding: 3px;
 }
+
+.py-data {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 5px 0;
+}
+
+.py-data-list .tc-menu-list-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.py-data-list .tc-menu-list-item:first-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.py-data .tc-tiddlylink:hover {
+  text-decoration: none;
+}
+
+.py-data .py-data-actions {
+  float: right;
+}
+
+.py-data .py-data-actions .py-btn {
+  color: #999;
+  fill: #999;
+  padding: 2px 3px;
+  border-radius: 4px;
+  font-size: .8em;
+  margin-left: 6px;
+}
+
+@media (min-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {
+  .py-data .py-data-actions .py-btn {
+    opacity: 0;
+    transition: opacity ease-in .14s;
+  }
+
+  .py-data:hover .py-data-actions .py-btn {
+    opacity: 1;
+  }
+}
+
+.py-data-heading {
+  margin-top: 4px;
+  margin-bottom: 14px;
+}
+
+.py-welcome-data {
+  margin-top: 8px;
+}
