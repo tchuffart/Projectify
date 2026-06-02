@@ -23,6 +23,15 @@ ConvertIntoProject: Omzetten in project
 Category: Categorie
 Categories: Categorieën
 Dashboard: Dashboard
+Data: Data
+DataActions/Hint: Acties
+DeleteData/Caption: Verwijder data-element
+DeleteData/Hint: Verwijder dit data-element
+EmptyDataTitle: Nog geen data
+EmptyDataDescription: Voeg het eerste data-element toe aan dit project.
+AddData/Caption: Voeg data toe
+AddData/Hint: Voeg een nieuw data-element toe aan het project
+AddDataToProject/Placeholder: Geef dit element een naam...
 DateFormat: DD mmm
 DefaultDashboardTab: Standaard dashboard tabblad
 DragTodoTip: Versleep een Tiddler naar hieronder om het als een taak aan dit project toe te voegen.
