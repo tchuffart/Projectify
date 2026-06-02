@@ -23,6 +23,15 @@ ConvertIntoProject: Convertir en projet
 Category: Catégorie
 Categories: Catégories
 Dashboard: Tableau de bord
+Data: Données
+DataActions/Hint: Actions
+DeleteData/Caption: Supprimer cet élément
+DeleteData/Hint: Supprimer cet élément de données
+EmptyDataTitle: Aucune donnée
+EmptyDataDescription: Ajoutez votre premier élément de données à ce projet.
+AddData/Caption: Ajouter une donnée
+AddData/Hint: Ajouter un nouvel élément de données au projet
+AddDataToProject/Placeholder: Nommez cet élément...
 DateFormat: DD mmm
 DefaultDashboardTab: Onglet par défaut dans le tableau de bord
 DragTodoTip: Glissez & déposez un tiddler ci-dessous pour ajouter une tâche à ce projet.
