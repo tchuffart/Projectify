@@ -1,0 +1,24 @@
+created: 20210202000000000
+modified: 20210202000000000
+tags: $:/tags/Macro
+title: $:/plugins/nico/projectify/macros/data-list
+type: text/vnd.tiddlywiki
+
+\define lingo-base() $:/language/projectify/
+
+\define data-list-filtered()
+  <$vars projectTag={{!!title}}>
+    <div class="py-data-list">
+      <$list
+        filter="[all[tiddlers]tag<projectTag>tag[data]!has[draft.of]sort[title]]"
+        template="$:/plugins/nico/projectify/ui/data/DataItem"
+      />
+    </div>
+  </$vars>
+\end
+
+\define data-list()
+  <$list filter=<<py-has-data>> variable="ignore">
+    <<data-list-filtered>>
+  </$list>
+\end

@@ -1,0 +1,16 @@
+created: 20210202000000000
+list-after: $:/core/ui/ViewTemplate/tags
+modified: 20210202000000000
+tags: $:/tags/ViewTemplate
+title: $:/plugins/nico/projectify/ui/data/DataHeading
+type: text/vnd.tiddlywiki
+
+\define lingo-base() $:/language/projectify/
+
+<$list filter=<<py-is-data>>>
+  <div class="py-todo-heading py-data-heading">
+    <$list filter="[all[current]tags[]filter<py-all-projects-and-subprojects-filter>]">
+      <$link to={{!!title}} overrideClass="py-project-link"/>
+    </$list>
+  </div>
+</$list>

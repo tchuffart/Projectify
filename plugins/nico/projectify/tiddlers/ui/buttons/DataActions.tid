@@ -1,0 +1,31 @@
+created: 20210202000000000
+modified: 20210202000000000
+tags:
+title: $:/plugins/nico/projectify/ui/buttons/DataActions
+type: text/vnd.tiddlywiki
+
+\define lingo-base() $:/language/projectify/
+
+<$vars
+  popupTiddler=<<qualify "$:/state/projectify/data-actions-dropdown">>
+  cssClass="py-btn"
+>
+  <$button
+    class=<<cssClass>>
+    popup=<<popupTiddler>>
+    tooltip={{$:/language/projectify/DataActions/Hint}}
+    aria-label={{$:/language/projectify/DataActions/Hint}}
+  >
+    {{$:/plugins/nico/projectify/images/dots}}
+  </$button>
+
+  <$reveal state=<<popupTiddler>> type="popup" position="belowleft" animate="no">
+    <div class="tc-drop-down py-drop-down">
+      <$button class="tc-btn-invisible">
+        {{$:/core/images/delete-button}} <<lingo DeleteData/Caption>>
+        <$action-deletetiddler $tiddler={{!!title}}/>
+        <$action-sendmessage $message="tm-auto-save-wiki"/>
+      </$button>
+    </div>
+  </$reveal>
+</$vars>
