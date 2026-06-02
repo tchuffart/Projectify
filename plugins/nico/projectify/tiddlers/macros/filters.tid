@@ -202,15 +202,3 @@ todo [all[<actionTiddler>]tags[]] -Inbox -[tag[Project]] -[tag[SubProject]] [<cu
 \define py-is-data()
 [all[current]tag[data]]
 \end
-
-\define py-has-data()
-[all[tiddlers]tag{!!title}tag[data]!has[draft.of]limit[1]]
-\end
-
-\define py-open-data()
-[all[tiddlers]tag{!!title}tag[data]!has[draft.of]sort[title]]
-\end
-
-\define py-is-data()
-[all[current]tag[data]]
-\end
