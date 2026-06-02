@@ -23,6 +23,15 @@ ConvertIntoProject: Zu Projekt konvertieren
 Category: Kategorie
 Categories: Kategorien
 Dashboard: Dashboard
+Data: Daten
+DataActions/Hint: Aktionen
+DeleteData/Caption: Datenelement löschen
+DeleteData/Hint: Dieses Datenelement löschen
+EmptyDataTitle: Noch keine Daten
+EmptyDataDescription: Füge das erste Datenelement zu diesem Projekt hinzu.
+AddData/Caption: Daten hinzufügen
+AddData/Hint: Neues Datenelement zum Projekt hinzufügen
+AddDataToProject/Placeholder: Dieses Element benennen...
 DateFormat: DD. mmm
 DefaultDashboardTab: Standard Dashboard Ansicht
 DragTodoTip: Beliebige Tiddler durch Drag&Drop als Aufgabe zum Projekt hinzufügen.
