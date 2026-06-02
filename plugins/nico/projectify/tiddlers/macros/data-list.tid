@@ -17,8 +17,11 @@ type: text/vnd.tiddlywiki
   </$vars>
 \end
 
-\define data-list()
+\define data-list(emptyTemplate)
   <$list filter=<<py-has-data>> variable="ignore">
     <<data-list-filtered>>
+  </$list>
+  <$list filter="[all[tiddlers]tag{!!title}tag[data]!has[draft.of]count[]match[0]]" variable="ignore">
+    <$transclude tiddler=<<__emptyTemplate__>>/>
   </$list>
 \end

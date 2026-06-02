@@ -26,4 +26,13 @@ type: text/vnd.tiddlywiki
   {{||$:/plugins/nico/projectify/ui/forms/ProjectActions}}
 
   {{||$:/plugins/nico/projectify/ui/buttons/ToggleCompletedTodos}}
+
+  <h2><<lingo Data>> {{||$:/plugins/nico/projectify/images/stack}}</h2>
+
+  <$macrocall
+    $name="data-list"
+    emptyTemplate="$:/plugins/nico/projectify/ui/welcome/EmptyData"
+  />
+
+  {{||$:/plugins/nico/projectify/ui/forms/ProjectDataActions}}
 </$list>
