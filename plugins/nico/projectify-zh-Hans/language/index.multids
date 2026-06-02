@@ -23,6 +23,15 @@ ConvertIntoProject: 转换为项目
 Category: 类别
 Categories: 所有类别
 Dashboard: 仪表盘
+Data: 数据
+DataActions/Hint: 操作
+DeleteData/Caption: 删除数据项
+DeleteData/Hint: 删除此数据项
+EmptyDataTitle: 暂无数据
+EmptyDataDescription: 向此项目添加第一个数据项。
+AddData/Caption: 添加数据
+AddData/Hint: 向项目添加新的数据项
+AddDataToProject/Placeholder: 为此数据项命名...
 DateFormat: mmmDD日 DDD 
 DefaultDashboardTab: 仪表盘默认选项卡
 DragTodoTip: 通过拖放下面的任何Tddler，可将其作为任务添加到此项目中。
