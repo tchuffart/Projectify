@@ -6,13 +6,16 @@ type: text/vnd.tiddlywiki
 \define lingo-base() $:/language/projectify/
 
 \define project-add-data-actions()
-  <$action-createtiddler
-    $basetitle={{{ [<stateTiddler>get[data_name]] }}}
-    $savetitle="$:/state/projectify/new-data"
-  />
-  <$action-listops $tiddler={{$:/state/projectify/new-data}} $tags="[<projectTitle>] data"/>
-  <$action-setfield $tiddler=<<stateTiddler>> data_name=""/>
-  <$action-sendmessage $message="tm-auto-save-wiki"/>
+  <$list filter="[<stateTiddler>get[data_name]!match[]]" variable="ignore">
+    <$action-createtiddler
+      $basetitle={{{ [<stateTiddler>get[data_name]] }}}
+      $savetitle="$:/state/projectify/new-data"
+    />
+    <$action-listops $tiddler={{$:/state/projectify/new-data}} $addtags=<<projectTitle>>/>
+    <$action-listops $tiddler={{$:/state/projectify/new-data}} $addtags="data"/>
+    <$action-setfield $tiddler=<<stateTiddler>> data_name=""/>
+    <$action-sendmessage $message="tm-auto-save-wiki"/>
+  </$list>
 \end
 
 <$vars stateTiddler=<<qualify "$:/temp/projectify/data-form">>
