@@ -6,22 +6,12 @@ type: text/vnd.tiddlywiki
 
 \define lingo-base() $:/language/projectify/
 
-\define data-list-filtered()
-  <$vars projectTag={{!!title}}>
-    <div class="py-data-list">
-      <$list
-        filter="[all[tiddlers]tag<projectTag>tag[data]!has[draft.of]sort[title]]"
-        template="$:/plugins/nico/projectify/ui/data/DataItem"
-      />
-    </div>
-  </$vars>
-\end
-
 \define data-list(emptyTemplate)
-  <$list filter=<<py-has-data>> variable="ignore">
-    <<data-list-filtered>>
-  </$list>
-  <$list filter="[all[tiddlers]tag{!!title}tag[data]!has[draft.of]count[]match[0]]" variable="ignore">
-    <$transclude tiddler=<<__emptyTemplate__>>/>
-  </$list>
+<div class="py-data-list">
+  <$list
+    filter="[all[tiddlers]tag<currentTiddler>tag[data]!has[draft.of]sort[title]]"
+    template="$:/plugins/nico/projectify/ui/data/DataItem"
+    emptyMessage="""<$transclude tiddler=<<__emptyTemplate__>>/>"""
+  />
+</div>
 \end
