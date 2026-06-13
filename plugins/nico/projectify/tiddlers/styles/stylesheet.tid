@@ -298,11 +298,11 @@ type: text/vnd.tiddlywiki
   padding: 5px 0;
 }
 
-.py-data-list .tc-menu-list-item {
+.py-data-list .py-data {
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.py-data-list .tc-menu-list-item:first-child {
+.py-data-list .py-data:first-child {
   border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
