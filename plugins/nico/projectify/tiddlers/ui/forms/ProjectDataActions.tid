@@ -11,8 +11,7 @@ type: text/vnd.tiddlywiki
       $basetitle={{{ [<stateTiddler>get[data_name]] }}}
       $savetitle="$:/state/projectify/new-data"
     />
-    <$action-listops $tiddler={{$:/state/projectify/new-data}} $addtags=<<projectTitle>>/>
-    <$action-listops $tiddler={{$:/state/projectify/new-data}} $addtags="data"/>
+    <$action-listops $tiddler={{$:/state/projectify/new-data}} $tags="[<projectTitle>] [[data]]"/>
     <$action-setfield $tiddler=<<stateTiddler>> data_name=""/>
     <$action-sendmessage $message="tm-auto-save-wiki"/>
   </$list>
