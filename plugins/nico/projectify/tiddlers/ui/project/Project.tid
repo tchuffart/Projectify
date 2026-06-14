@@ -16,7 +16,7 @@ type: text/vnd.tiddlywiki
       </$list>
     </div>
   </$list>
-  
+
   {{||$:/plugins/nico/projectify/ui/project/ArchivedProjectBanner}}
 
   <h2><<lingo Todos>> {{||$:/plugins/nico/projectify/images/pie}}</h2>
@@ -37,4 +37,13 @@ type: text/vnd.tiddlywiki
       {{||$:/plugins/nico/projectify/ui/forms/AddTodo}}
     </$vars>
   </$list>
+
+  <h2><<lingo Data>> {{||$:/plugins/nico/projectify/images/stack}}</h2>
+
+  <$macrocall
+    $name="data-list"
+    emptyTemplate="$:/plugins/nico/projectify/ui/welcome/EmptyData"
+  />
+
+  {{||$:/plugins/nico/projectify/ui/forms/ProjectDataActions}}
 </$list>

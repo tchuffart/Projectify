@@ -1,0 +1,9 @@
+created: 20210202000000000
+modified: 20210202000000000
+tags:
+title: $:/plugins/nico/projectify/ui/data/DataActions
+type: text/vnd.tiddlywiki
+
+<span class="py-data-actions">
+  {{||$:/plugins/nico/projectify/ui/buttons/DataActions}}
+</span>

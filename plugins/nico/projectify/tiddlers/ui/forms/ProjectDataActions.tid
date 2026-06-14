@@ -1,0 +1,42 @@
+created: 20210202000000000
+modified: 20210202000000000
+title: $:/plugins/nico/projectify/ui/forms/ProjectDataActions
+type: text/vnd.tiddlywiki
+
+\define lingo-base() $:/language/projectify/
+
+\define project-add-data-actions()
+  <$list filter="[<stateTiddler>get[data_name]!match[]]" variable="ignore">
+    <$action-createtiddler
+      $basetitle={{{ [<stateTiddler>get[data_name]] }}}
+      $savetitle="$:/state/projectify/new-data"
+    />
+    <$action-listops $tiddler={{$:/state/projectify/new-data}} $tags="[<projectTitle>] [[data]]"/>
+    <$action-setfield $tiddler=<<stateTiddler>> data_name=""/>
+    <$action-sendmessage $message="tm-auto-save-wiki"/>
+  </$list>
+\end
+
+<$vars stateTiddler=<<qualify "$:/temp/projectify/data-form">>
+       projectTitle={{!!title}}
+       save-actions=<<project-add-data-actions>>>
+  <div class="py-actions">
+
+    <$reveal type="match" state=<<stateTiddler>> text="">
+      {{||$:/plugins/nico/projectify/ui/buttons/AddData}}
+    </$reveal>
+
+    <$reveal type="match" state=<<stateTiddler>> text="show">
+      <$keyboard key="enter">
+        <<save-actions>>
+        <$edit-text class="py-input" focus="true" tiddler=<<stateTiddler>> field="data_name" placeholder={{$:/language/projectify/AddDataToProject/Placeholder}}/>
+      </$keyboard>
+      <div class="py-actions">
+        {{||$:/plugins/nico/projectify/ui/buttons/Save}}
+        or
+        {{||$:/plugins/nico/projectify/ui/buttons/Cancel}}
+      </div>
+    </$reveal>
+
+  </div>
+</$vars>

@@ -1,0 +1,17 @@
+created: 20210202000000000
+modified: 20210202000000000
+tags:
+title: $:/plugins/nico/projectify/ui/data/DataItem
+type: text/vnd.tiddlywiki
+
+<div class="py-data">
+  <$link to={{!!title}}>
+    {{||$:/plugins/nico/projectify/ui/data/DataCaption}}
+    <$list filter="[all[current]!text[]]">
+      <span class="py-todo-text-icon">
+        {{$:/plugins/nico/projectify/images/file}}
+      </span>
+    </$list>
+  </$link>
+  {{||$:/plugins/nico/projectify/ui/data/DataActions}}
+</div>

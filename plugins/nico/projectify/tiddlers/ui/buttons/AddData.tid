@@ -1,0 +1,16 @@
+created: 20210202000000000
+modified: 20210202000000000
+title: $:/plugins/nico/projectify/ui/buttons/AddData
+type: text/vnd.tiddlywiki
+
+\define lingo-base() $:/language/projectify/
+
+<$button
+  class="py-btn"
+  set=<<stateTiddler>>
+  setTo="show"
+  tooltip={{$:/language/projectify/AddData/Hint}}
+  aria-label={{$:/language/projectify/AddData/Hint}}
+>
+  {{$:/core/images/list-bullet}} <<lingo AddData/Caption>>
+</$button>

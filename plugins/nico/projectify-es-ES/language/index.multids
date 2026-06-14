@@ -24,6 +24,15 @@ Calendar: Calendario
 Category: Categoría
 Categories: Categorías
 Dashboard: Cuadro de Mando
+Data: Datos
+DataActions/Hint: Acciones
+DeleteData/Caption: Eliminar elemento
+DeleteData/Hint: Eliminar este elemento de datos
+EmptyDataTitle: Sin datos aún
+EmptyDataDescription: Añade tu primer elemento de datos a este proyecto.
+AddData/Caption: Añadir dato
+AddData/Hint: Añadir un nuevo elemento de datos al proyecto
+AddDataToProject/Placeholder: Nombra este elemento...
 DateFormat: DDth mmm
 DefaultDashboardTab: Pestaña por defecto en cuadro de mando
 DragTodoTip: Arrastre y suelte cualquier tiddler a continuación para agregarlo como una tarea a este proyecto.
