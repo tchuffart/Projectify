@@ -303,26 +303,23 @@ type: text/vnd.tiddlywiki
   text-overflow: ellipsis;
 }
 
-.py-data-toggle {
-  flex: 1;
-  text-align: left;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  color: <<colour tiddler-link-foreground>>;
-  fill: <<colour tiddler-link-foreground>>;
-  padding: 0;
+.py-data-toggle-btn {
+  flex-shrink: 0;
+  padding: 0 4px 0 0;
+  color: #999;
+  fill: #999;
 }
 
-.py-data-toggle svg {
+.py-data-toggle-btn svg {
   width: 1em;
   height: 1em;
   vertical-align: middle;
-  margin-right: 4px;
 }
 
-.py-data-toggle:hover {
-  color: <<colour tiddler-link-foreground>>;
-  text-decoration: underline;
+.py-data-header .tc-tiddlylink {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .py-data-content {

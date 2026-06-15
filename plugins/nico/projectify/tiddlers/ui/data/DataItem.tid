@@ -11,15 +11,22 @@ type: text/vnd.tiddlywiki
 <$vars stateTitle=<<qualify "$:/state/projectify/data-expand">>>
   <div class="py-data">
     <div class="py-data-header">
-      <$button actions=<<toggle-data-expand>> class="tc-btn-invisible py-data-toggle">
+      <$button actions=<<toggle-data-expand>> class="tc-btn-invisible py-data-toggle-btn">
         <$reveal type="match" state=<<stateTitle>> text="open">
           {{$:/core/images/down-arrow}}
         </$reveal>
         <$reveal type="nomatch" state=<<stateTitle>> text="open">
           {{$:/core/images/right-arrow}}
         </$reveal>
-        {{||$:/plugins/nico/projectify/ui/data/DataCaption}}
       </$button>
+      <$link to={{!!title}}>
+        {{||$:/plugins/nico/projectify/ui/data/DataCaption}}
+        <$list filter="[all[current]!text[]]">
+          <span class="py-todo-text-icon">
+            {{$:/plugins/nico/projectify/images/file}}
+          </span>
+        </$list>
+      </$link>
       {{||$:/plugins/nico/projectify/ui/data/DataActions}}
     </div>
     <$reveal type="match" state=<<stateTitle>> text="open">
